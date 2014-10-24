@@ -1,15 +1,14 @@
 {
-    "name": "irvyne/php_a2_gr2_twig",
-    "description": "Rendu A2 GR2 Sem2",
+    "name": "adrien/php_a2_gr1_twig",
+    "description": "WTFTFTFTF",
     "require": {
-        "twig/twig": "~1.16",
-        "imagine/imagine": "~0.6"
+        "twig/twig": "~1.16"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": "Thibaud BARDIN",
-            "email": "thibaud.bardin@gmail.com"
+            "name": "Adrien",
+            "email": "adrien.bonnet@hotmail.fr"
         }
     ],
     "minimum-stability": "stable"
