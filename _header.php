@@ -14,6 +14,7 @@ $config = include __DIR__.'/config/config.php';
 
 $link = getDatabaseLink($config['database']);
 
+
 Twig_Autoloader::register();
 
 $loader = new Twig_Loader_Filesystem([
