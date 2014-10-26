@@ -36,7 +36,6 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="categories.php">Categories</a></li>
                 <li><a href="tags.php">Tags</a></li>
-                <li><a href="contact.php">Contact</a></li>
                 {% if connected is defined and connected %}
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration <span class="caret"></span></a>
@@ -65,9 +64,9 @@
             <ul class="nav navbar-nav navbar-right">
                 {% if connected is defined and connected %}
                 <li><a href="#">Welcome {{ username }}!</a></li>
-                <li><a href="/logout.php">Logout</a></li>
+                <li><a href="logout.php">Logout</a></li>
                 {% else %}
-                <li><a href="/login.php">Login</a></li>
+                <li><a href="login.php">Login</a></li>
                 {% endif %}
             </ul>
         </div><!--/.nav-collapse -->

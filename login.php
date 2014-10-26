@@ -7,7 +7,7 @@
 require __DIR__.'/_header.php';
 
 if (isConnected()) {
-    header('Location: index.php');
+    header('Location: admin-article-list.php');
 }
 
 if (isset($_POST['loginSubmit'])) {
@@ -19,13 +19,14 @@ if (isset($_POST['loginSubmit'])) {
     } else {
         $connection = connection($link, $username, $password);
         if ($connection) {
-            header('Location: index.php');
+            header('Location: admin-article-list.php');
         } else {
             $credential_error = true;
         }
     }
 }
-
-include __DIR__.'/template/login.php';
+echo $twig->render('login.html.twig', [
+    'missing_credential' => $missing_credential,
+]);
 
 require __DIR__.'/_footer.php';
