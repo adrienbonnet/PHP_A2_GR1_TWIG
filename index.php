@@ -12,16 +12,9 @@ $currentPage = !empty($_GET['p']) ? (int)$_GET['p'] : 1;// numéro de la page
 $nbPages = ceil($nbArticles/$perPage); // nombre de pagination
 
 
-if (0 >= $currentPage) {
-    header('Location: index.php?p=1');
-}
-if ($currentPage > $nbPages) {
-    header('Location: index.php?p='.$nbPages);
-}
-
 $articles = getArticles($link, null, ($currentPage-1)*$perPage, $perPage);
 
-echo $twig->render('article.html.twig', [
+echo $twig->render('articles.html.twig', [
     'articles' => $articles,
 ]);
 
