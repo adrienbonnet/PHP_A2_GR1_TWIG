@@ -7,7 +7,8 @@
 require __DIR__.'/_header.php';
 
 $categories = getCategories($link);
-
+echo $twig->render('categories.html.twig', [
+    'categories' => $categories,
+]);
 require __DIR__.'/_footer.php';
 
-include __DIR__.'/template/categories.php';

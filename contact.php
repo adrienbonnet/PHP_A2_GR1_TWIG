@@ -22,7 +22,9 @@ if (isset($_POST['contactSubmit'])) {
         }
     }
 }
-
+echo $twig->render('contact.html.twig', [
+    'name' => $name,
+    'email' => $email,
+    'message' => $message,
+]);
 require __DIR__.'/_footer.php';
-
-include __DIR__.'/template/contact.php';

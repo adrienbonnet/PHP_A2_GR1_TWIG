@@ -7,7 +7,7 @@
 require __DIR__.'/_header.php';
 
 $tags = getTags($link);
-
+echo $twig->render('tags.html.twig', [
+    'tags' => $tags,
+]);
 require __DIR__.'/_footer.php';
-
-include __DIR__.'/template/tags.php';
