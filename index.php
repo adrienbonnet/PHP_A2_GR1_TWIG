@@ -13,9 +13,12 @@ $nbPages = ceil($nbArticles/$perPage); // nombre de pagination
 
 
 $articles = getArticles($link, null, ($currentPage-1)*$perPage, $perPage);
-
 echo $twig->render('articles.html.twig', [
     'articles' => $articles,
+    'perPage' => $perPage,
+    'nbArticles' => $nbArticles,
+    'currentPage' => $currentPage,
+    'nbPages' => $nbPages,
 ]);
 
 require __DIR__.'/_footer.php';

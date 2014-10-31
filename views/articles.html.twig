@@ -21,3 +21,14 @@
                </article>
     {% endfor %}
 {% endblock %}
+{% block pagination %}
+<ul class="pagination">
+    <li {{ currentPage == 1 ? 'class="disabled"' : null }}  ><a href="./index.php?p={{ currentPage-1}}">  &laquo; </a></li>
+    {%  set i=1 %}
+    {% for  temp in 0..nbPages-1 %}
+        <li {{ currentPage == i ? 'class="active"' : null}} ><a href="./index.php?p={{ i }}">{{ i }}</a></li>
+        {%  set i=i+1 %}
+    {% endfor %}
+    <li {{ nbPages == currentPage ? 'class="disabled"' :null}} ><a href="./index.php?p={{ currentPage+1}}">  &raquo; </a></li>
+</ul>
+{% endblock %}

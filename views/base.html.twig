@@ -36,6 +36,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="categories.php">Categories</a></li>
                 <li><a href="tags.php">Tags</a></li>
+                <li><a href="admin-article-list.php">Admin list</a></li>
                 {% if connected is defined and connected %}
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration <span class="caret"></span></a>
@@ -75,6 +76,9 @@
 
 <div class="container">
     {% block content %}{% endblock %}
+    {% block pagination %}{% endblock %}
+    {% block form %}{% endblock %}
+
 </div>
 
 <footer id="footer" class="col-md-12 text-center">
