@@ -24,7 +24,7 @@ if (isset($_POST['loginSubmit'])) {
     } else {
         $connection = connection($link, $username, $password);
         if ($connection) {
-            header('Location: ./index.php');
+            header('Location: ./admin-article-list.php');
         } else {
             $credential_error = true;
         }
